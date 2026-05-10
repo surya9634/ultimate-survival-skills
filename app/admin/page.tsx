@@ -141,10 +141,6 @@ export default function AdminPage() {
               AUTHENTICATE
             </button>
           </form>
-
-          <p className="text-xs text-gray-600 text-center mt-6">
-            Demo: admin / uss2026
-          </p>
         </div>
       </div>
     );

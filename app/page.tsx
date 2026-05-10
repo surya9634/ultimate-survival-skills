@@ -43,11 +43,6 @@ export default function Home() {
                       Rules
                     </a>
                   </li>
-                  <li>
-                    <a href="/admin" className="hover:text-white transition-colors">
-                      Admin Console
-                    </a>
-                  </li>
                 </ul>
               </div>
 
