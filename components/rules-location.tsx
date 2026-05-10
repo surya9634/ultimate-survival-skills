@@ -6,7 +6,6 @@ export function RulesLocation() {
     'There will be 3 maps — Erangel, Sanhok, Miramar for BGMI and Bermuda, Purgatory, Kalahari for Frefire',
     'If any third-party apps, zip files, or hacks are found on a team&apos;s device, the team will be disqualified from esports.',
     'A minimum level of 40 is required to enter the Match Lobby.',
-    'The minimum requirement is 50 teams for BGMI to qualify for the grand prize pool of ₹40,000.',
     'There will be 15-18 teams per Match Lobby.',
     'In case of a low team count, the management will decide to postpone the event until further notice.',
   ];
