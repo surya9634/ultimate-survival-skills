@@ -337,14 +337,10 @@ export function RegistrationForm() {
                 <div className="flex flex-col items-center gap-4">
                   <h3 className="text-xl font-black text-white">SCAN TO PAY ₹500</h3>
                   <div className="w-48 h-48 bg-white p-2 flex items-center justify-center relative group">
-                    {/* Placeholder for QR Code */}
-                    <div className="absolute inset-0 flex items-center justify-center text-black font-bold text-center p-4">
-                      ADD QR CODE IMAGE HERE
-                    </div>
                     <img 
-                      src="/placeholder.svg" 
+                      src="/qr.jpeg" 
                       alt="Payment QR Code" 
-                      className="w-full h-full object-contain opacity-20"
+                      className="w-full h-full object-contain"
                     />
                     <div className="absolute inset-0 border-2 border-red-600 animate-pulse pointer-events-none"></div>
                   </div>
