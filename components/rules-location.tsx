@@ -8,9 +8,7 @@ export function RulesLocation() {
     'A minimum level of 40 is required to enter the Match Lobby.',
     'The minimum requirement is 50 teams for BGMI to qualify for the grand prize pool of ₹40,000.',
     'There will be 15-18 teams per Match Lobby.',
-    'Note: In case the number of team counts increases, we can also increase the prize pool.',
     'In case of a low team count, the management will decide to postpone the event until further notice.',
-    'After Qualifier Matches, all players will be conducted offline matches at CG Bugs School of 3D Animation, Games & Visual Effects, Sangamner MH 422605.',
   ];
 
   return (
