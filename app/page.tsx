@@ -66,7 +66,7 @@ export default function Home() {
                     </a>
                   </li>
                   <li className="text-gray-600">
-                    Sangamner, MH 422605
+                    Gurugram, Haryana 122002
                   </li>
                 </ul>
               </div>

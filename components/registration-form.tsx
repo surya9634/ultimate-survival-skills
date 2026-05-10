@@ -456,9 +456,9 @@ export function RegistrationForm() {
               </div>
               <h3 className="text-xl font-black text-white mb-4">EVENTS LOCATION</h3>
               <p className="text-gray-400 text-sm font-bold mb-2">
-                Ultimate Survival Series Arena
+                DLF CyberHub
               </p>
-              <p className="text-gray-500 text-xs">CG BUGS, 2nd Floor, Dhole Empire, Pune – Nashik Hwy, Govind Nagar, Sangamner, Maharashtra 422605</p>
+              <p className="text-gray-500 text-xs">Ground Floor, Building 10C, DLF Cyber City, DLF Phase 2, Sector 24, Gurugram, Haryana 122002</p>
             </div>
           </div>
         </div>

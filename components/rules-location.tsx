@@ -67,21 +67,21 @@ export function RulesLocation() {
                 <div>
                   <p className="text-xs font-bold text-gray-600 uppercase tracking-widest mb-2">Venue</p>
                   <p className="text-white font-bold text-lg">
-                    Ultimate Survival Series Arena (CG Bugs)
+                    DLF CyberHub
                   </p>
                 </div>
 
                 <div>
                   <p className="text-xs font-bold text-gray-600 uppercase tracking-widest mb-2">Address</p>
                   <p className="text-gray-400 text-sm leading-relaxed">
-                    CG BUGS, 2nd Floor, Dhole Empire, Pune – Nashik Hwy, Govind Nagar, Sangamner, Maharashtra 422605
+                    Ground Floor, Building 10C, DLF Cyber City, DLF Phase 2, Sector 24, Gurugram, Haryana 122002
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3 pt-4">
                   <span className="text-red-600 text-xl flex-shrink-0 mt-1">📍</span>
                   <div>
-                    <p className="text-gray-300 text-sm">Located in the heart of Sangamner, Maharashtra</p>
+                    <p className="text-gray-300 text-sm">Located in the heart of Gurugram, Haryana</p>
                     <p className="text-gray-600 text-xs mt-1">Perfect venue for offline finals and champion celebrations</p>
                   </div>
                 </div>
@@ -95,7 +95,7 @@ export function RulesLocation() {
                 width="100%"
                 height="100%"
                 frameBorder="0"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8373485844373!2d81.6355197!3d21.2432889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28ddaf49daaaaa%3A0x1234567890abcdef!2sCG%20BUGS%20School%20of%203D%20Animation!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233519391054!2d77.085521975496!3d28.48784307574549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19386394df05%3A0x2f2805b9b4942a41!2sDLF%20CyberHub!5e0!3m2!1sen!2sin!4v1715340000000!5m2!1sen!2sin"
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
