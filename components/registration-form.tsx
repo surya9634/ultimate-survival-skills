@@ -19,11 +19,9 @@ export function RegistrationForm() {
     mobile1: '',
     mobile2: '',
     gameType: 'SELECT GAME',
-    teamLogoUrl: '',
     teamAdminId: '',
   });
 
-  const [teamLogoFile, setTeamLogoFile] = useState<File | null>(null);
   const [paymentScreenshot, setPaymentScreenshot] = useState<File | null>(null);
 
   const handleChange = (
@@ -33,11 +31,8 @@ export function RegistrationForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleFileChange = (type: 'logo' | 'payment') => (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (type === 'logo') {
-      const file = e.target.files?.[0];
-      setTeamLogoFile(file || null);
-    } else if (type === 'payment') {
+  const handleFileChange = (type: 'payment') => (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (type === 'payment') {
       const file = e.target.files?.[0];
       setPaymentScreenshot(file || null);
     }
@@ -45,7 +40,7 @@ export function RegistrationForm() {
 
   const uploadFile = async (file: File, fileType: string): Promise<string> => {
     try {
-      const progressKey = fileType === 'logo' ? 'logo' : 'payment';
+      const progressKey = 'payment';
       setUploadProgress((prev) => ({ ...prev, [progressKey]: 10 }));
 
       const fileExt = file.name.split('.').pop();
@@ -95,14 +90,7 @@ export function RegistrationForm() {
         return;
       }
 
-      let teamLogoUrl = '';
       let paymentScreenshotUrl = '';
-
-      // Upload team logo
-      if (teamLogoFile) {
-        console.log('[v0] Uploading team logo...');
-        teamLogoUrl = await uploadFile(teamLogoFile, 'logo');
-      }
 
       // Upload payment screenshot
       if (paymentScreenshot) {
@@ -124,7 +112,6 @@ export function RegistrationForm() {
             mobile_1: formData.mobile1,
             mobile_2: formData.mobile2 || null,
             game_type: formData.gameType,
-            team_logo_url: teamLogoUrl || null,
             team_admin_id: formData.teamAdminId || null,
             aadhar_id_1_url: paymentScreenshotUrl || null,
             aadhar_id_2_url: null,
@@ -151,11 +138,9 @@ export function RegistrationForm() {
         mobile1: '',
         mobile2: '',
         gameType: 'SELECT GAME',
-        teamLogoUrl: '',
         teamAdminId: '',
       });
-      setTeamLogoFile(null);
-      setAadharFiles([]);
+      setPaymentScreenshot(null);
       setUploadProgress({});
 
       setTimeout(() => setSubmitMessage(''), 5000);
@@ -309,27 +294,6 @@ export function RegistrationForm() {
                   <option>BGMI</option>
                   <option>FREE FIRE</option>
                 </select>
-              </div>
-
-              {/* Team Logo Upload */}
-              <div>
-                <label className="block text-xs font-bold text-white uppercase tracking-widest mb-2">
-                  Team Logo
-                </label>
-                <div className="border-2 border-dashed border-gray-700 p-6 rounded hover:border-red-600 transition-colors cursor-pointer">
-                  <input
-                    type="file"
-                    onChange={handleFileChange('logo')}
-                    accept="image/*"
-                    className="hidden"
-                    id="team-logo-input"
-                  />
-                  <label htmlFor="team-logo-input" className="cursor-pointer flex flex-col items-center gap-2">
-                    <span className="text-red-600 text-2xl">📁</span>
-                    <span className="text-white font-bold">{teamLogoFile?.name || 'Choose File'}</span>
-                    {uploadProgress.logo && <span className="text-xs text-gray-500">{uploadProgress.logo}%</span>}
-                  </label>
-                </div>
               </div>
 
               {/* Payment Section */}

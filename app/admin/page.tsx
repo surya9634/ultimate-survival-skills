@@ -15,7 +15,6 @@ interface Registration {
   mobile_2: string | null;
   email_id: string;
   game_type: string;
-  team_logo_url: string | null;
   aadhar_id_1_url: string | null;
   aadhar_id_2_url: string | null;
   aadhar_id_3_url: string | null;
@@ -263,14 +262,6 @@ export default function AdminPage() {
                 <div>
                   <p className="text-xs uppercase font-bold text-gray-500 mb-2 sm:mb-3">Downloads</p>
                   <div className="space-y-2">
-                    {selectedTeam.team_logo_url && (
-                      <button
-                        onClick={() => downloadFile(selectedTeam.team_logo_url!, `${selectedTeam.team_name}-logo.jpg`)}
-                        className="w-full border border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-4 py-2 text-xs uppercase font-bold transition-all"
-                      >
-                        📥 Team Logo
-                      </button>
-                    )}
                     {selectedTeam.aadhar_id_1_url && (
                       <button
                         onClick={() => downloadFile(selectedTeam.aadhar_id_1_url!, `${selectedTeam.team_name}-payment.jpg`)}
