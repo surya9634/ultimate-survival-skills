@@ -19,7 +19,6 @@ export function RegistrationForm() {
     mobile1: '',
     mobile2: '',
     gameType: 'SELECT GAME',
-    teamAdminId: '',
   });
 
   const [paymentScreenshot, setPaymentScreenshot] = useState<File | null>(null);
@@ -111,7 +110,7 @@ export function RegistrationForm() {
             player_id_5: formData.playerId5 || null,
             mobile_1: formData.mobile1,
             mobile_2: formData.mobile2 || null,
-            email_id: formData.email,
+            email_id: formData.mobile1, // Map mobile to email_id for DB compatibility
             game_type: formData.gameType,
             team_logo_url: null,
             aadhar_id_1_url: paymentScreenshotUrl || null,
@@ -139,7 +138,6 @@ export function RegistrationForm() {
         mobile1: '',
         mobile2: '',
         gameType: 'SELECT GAME',
-        teamAdminId: '',
       });
       setPaymentScreenshot(null);
       setUploadProgress({});
@@ -411,27 +409,6 @@ export function RegistrationForm() {
                 <div className="flex items-start gap-3">
                   <span className="text-red-600 text-lg flex-shrink-0">●</span>
                   <span className="text-gray-300 text-sm">Man of The Match</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-l-4 border-red-600 pl-4">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-red-600 font-mono text-sm">// 04</span>
-              </div>
-              <h3 className="text-xl font-black text-white mb-4">EVENTS LOCATION</h3>
-              <p className="text-gray-400 text-sm font-bold mb-2">
-                DLF CyberHub
-              </p>
-              <p className="text-gray-500 text-xs">Ground Floor, Building 10C, DLF Cyber City, DLF Phase 2, Sector 24, Gurugram, Haryana 122002</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-me="text-gray-300 text-sm">Man of The Match</span>
                 </div>
               </div>
             </div>

@@ -222,7 +222,6 @@ export default function AdminPage() {
                       {reg.player_id_1} • {reg.player_id_2} • {reg.player_id_3} • {reg.player_id_4}
                       {reg.player_id_5 && ` • ${reg.player_id_5}`}
                     </p>
-                    <p className="text-gray-500 text-xs mt-2 truncate">{reg.email_id}</p>
                   </div>
                 ))}
               </div>
@@ -239,7 +238,6 @@ export default function AdminPage() {
                 <div>
                   <p className="text-xs uppercase font-bold text-gray-500 mb-2 sm:mb-3">Team Details</p>
                   <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
-                    <p><span className="text-gray-500">Email:</span> <span className="text-white break-all">{selectedTeam.email_id}</span></p>
                     <p><span className="text-gray-500">Game:</span> <span className="text-white">{selectedTeam.game_type}</span></p>
                     <p><span className="text-gray-500">WhatsApp:</span> <span className="text-white">{selectedTeam.mobile_1}</span></p>
                     {selectedTeam.mobile_2 && <p><span className="text-gray-500">Alt Phone:</span> <span className="text-white">{selectedTeam.mobile_2}</span></p>}
