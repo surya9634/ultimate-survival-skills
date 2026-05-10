@@ -20,6 +20,27 @@ export function Hero() {
     };
 
     fetchTeamCount();
+
+    // Subscribe to real-time changes
+    const channel = supabase
+      .channel('schema-db-changes')
+      .on(
+        'postgres_changes',
+        {
+          event: 'INSERT',
+          schema: 'public',
+          table: 'tournament_registrations',
+        },
+        () => {
+          // Increment the count locally when a new row is inserted
+          setRegisteredTeams((prev) => prev + 1);
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
   }, []);
 
   const handleJoinDrop = () => {
